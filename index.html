@@ -62,7 +62,22 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             });
         });
     </script>
+<script type="text/javascript" language="javascript">
+        function checkform()
+        {
+            var f = document.forms["theform"].elements;
+            var cansubmit = true;
 
+            for (var i = 0; i < f.length; i++) {
+                if (f[i].value.length == 0) cansubmit = false;
+            }
+
+            if (cansubmit) {
+                document.getElementById('btnregisternow').disabled = false;
+            }
+        }
+    </script>
+   
     <title>Home Page</title>
       <script type="text/javascript">
   window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=document.createElement("script");r.type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(r,a);for(var n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])};
@@ -325,26 +340,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis reiciendis
                                 repellendus assumenda consequatur aliquid harum nulla mollitia fugit rem aperiam.
                             </p>
-                            <form>
+                            <form name="theform">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Your Name"
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Name"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
+                                    <input type="email" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Email ID"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="tel" class="form-control form-control-sm" placeholder="Phone No"
+                                    <input type="tel" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Phone No"
                                         required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control form-control-sm" placeholder="Course Name"
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Course Name"
                                         required>
                                 </div>
                                 <div class="mb-3">
+                                   if(
                                     <input type="submit" class="btn btn-warning btn-block btn-sm" id="btnregisternow"
-                                        value="Register Online Now" disabled="disabled">
+                                        value="Register Online Now" onKeyup="checkform()" disabled="disabled">
                                 </div>
                             </form>
                         </div>
@@ -636,25 +652,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="modal-body">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, quos commodi?</p>
-                    <form>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control form-control-sm" placeholder="Your Email ID"
-                                required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="tel" class="form-control form-control-sm" placeholder="Phone No" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="text" class="form-control form-control-sm" placeholder="Course Name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="submit" id="btnregisternow" class="btn btn-success btn-block btn-sm" value="Register Online Now"
-                                disabled="disabled">
-                        </div>
-                    </form>
+                    <form name="theform">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Your Email ID"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="tel" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Phone No"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control form-control-sm" onKeyup="checkform()" placeholder="Course Name"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                   if(
+                                    <input type="submit" class="btn btn-warning btn-block btn-sm" id="btnregisternow"
+                                        value="Register Online Now" onKeyup="checkform()" disabled="disabled">
+                                </div>
+                            </form>
                 </div>
             </div>
         </div>
