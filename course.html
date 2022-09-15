@@ -126,10 +126,10 @@ dataLayer.push({
       }]
   }
 });
-			dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+ // Clear the previous ecommerce object.
 dataLayer.push({
   event: "purchase",
-  ecommerce: {
+  ecommerce1: {
       transaction_id: "T_12345",
       affiliation: "Riya's Courses",
       value: 3000,
@@ -158,8 +158,21 @@ dataLayer.push({
         location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
         price: 1800,
         quantity: 1
-      },
-      {
+      }]
+  }
+});
+dataLayer.push({
+  event: "purchase",
+  ecommerce2: {
+      transaction_id: "T_12346",
+      affiliation: "Riya's Courses",
+      value: 3000,
+      tax: 300,
+      shipping: 200,
+      currency: "INR",
+      coupon: "SUMMER_SALE",
+      items: [
+       {	
         item_id: "SKU_12346",
         item_name: "Web Analytics Course",
         affiliation: "Riya's Courses",
@@ -183,7 +196,8 @@ dataLayer.push({
         quantity: 1
       }]
   }
-});</script>
+});
+	</script>
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
