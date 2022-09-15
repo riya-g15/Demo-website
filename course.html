@@ -71,7 +71,7 @@ dataLayer.push({
 			dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
 dataLayer.push({
   event: "add_to_cart",
-  ecommerce: {
+  ecommerce1: {
       transaction_id: "T_12345",
       affiliation: "Riya's Courses",
       value: 3000,
@@ -100,7 +100,16 @@ dataLayer.push({
         location_id: "ChIJIQBpAG2ahYAR_6128GcTUEo",
         price: 1800,
         quantity: 1
-      },
+      }]},
+	ecommerce2:{
+	transaction_id: "T_12346",
+      affiliation: "Riya's Courses",
+      value: 3000,
+      tax: 300,
+      shipping: 200,
+      currency: "INR",
+      coupon: "SUMMER_SALE",
+      items: [
       {
         item_id: "SKU_12346",
         item_name: "Web Analytics Course",
