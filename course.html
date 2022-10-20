@@ -11,8 +11,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 	
 <script>
-		dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
-dataLayer.push({
+	
+	dataLayer.push({
   event: "view_item_list",
   ecommerce1: {
       items: [
@@ -26,10 +26,11 @@ dataLayer.push({
         item_category: "Course",
         price: 20,
         quantity: 1
-      }]}, ecommerce2:{
-	      items:[
+      }]},
+	ecommerce2:{
+      items: [
       {
-         item_id: "12346",
+           item_id: "12346",
         item_name: "Web Course",
         affiliation: "Riya's Courses",
         coupon: "FUN100",
@@ -41,7 +42,8 @@ dataLayer.push({
       }]
   }
 });
-			dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+		
+			dataLayer.push({ ecommerce: null }); 
 dataLayer.push({
   event: "add_to_cart",
   ecommerce1: {
@@ -72,7 +74,7 @@ dataLayer.push({
       }]
   }
 });
- // Clear the previous ecommerce object.
+
 dataLayer.push({
   event: "purchase",
   ecommerce1: {
