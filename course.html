@@ -79,23 +79,28 @@ dataLayer.push({
   event: "purchase",
   ecommerce1: {
       transaction_id: "T_12345",
-      affiliation: "Riya's Courses",
-      value: 20,
+      affiliation: "AAA",
+      value: 19.5,
       tax: 3,
       shipping: 2,
-      currency: "INR",
+      currency: "USD",
       coupon: "FUN100",
       items: [
        {
-        item_id: "12346",
-        item_name: "Web Course",
-        affiliation: "Riya's Courses",
+        item_id: "00AAA",
+        item_name: "Shoes",
+        affiliation: "AAA",
         coupon: "FUN100",
-        currency: "INR",
+        currency: "USD",
         index: 0,
-        item_category: "Course",
-        price: 12,
-        quantity: 1
+	discount: "0.5",
+	item_brand: "Sparx",
+        item_category: "Sneaker",
+	item_category2: "Shoes",
+	item_variant: "Men Shoes",
+	location_id: 10,
+        price: 15,
+        quantity: 20
       }]
   }
 });
